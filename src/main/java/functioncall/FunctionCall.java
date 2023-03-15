@@ -1,48 +1,44 @@
 package functioncall;
-
 import calculations.Calculations;
-
 import java.util.Scanner;
-
-
 public class FunctionCall extends Calculations {
     public void call() {
         int choice;
         Scanner sc = new Scanner(System.in);
 
         while (true) {
-            System.out.println("1.Triangle  2.Circle 3. Rectangle  4. Exit");
+            lg.info("1.Triangle  2.Circle 3. Rectangle  4. Exit");
 
-            System.out.println("Enter the choice : ");
+            lg.info("Enter the choice : ");
             choice = sc.nextInt();
 
             switch (choice) {
-                case 1:   //triangle
+                case 1:
 
-                    System.out.println("Enter the base : ");
+                    lg.info("Enter the base : ");
                     int base = sc.nextInt();
-                    System.out.println("Enter the height : ");
+                    lg.info("Enter the height : ");
                     int width = sc.nextInt();
-                    System.out.println("Enter the hypoteneous value: ");
+                    lg.info("Enter the hypoteneous value: ");
                     int hypotenous = sc.nextInt();
                     area(base,width);
                     perimeter(base,width,hypotenous);
                     break;
 
-                case 2:     //circle
+                case 2:
 
-                    System.out.println("Enter the radius : ");
+                    lg.info("Enter the radius : ");
                     int radius = sc.nextInt();
                     area(radius);
                     perimeter(radius);
                     break;
 
 
-                case 3:  //rectangle
+                case 3:
 
-                    System.out.println("Enter the breath value : ");
+                    lg.info("Enter the breath value : ");
                     Double breath = sc.nextDouble();
-                    System.out.println("Enter the height value : ");
+                    lg.info("Enter the height value : ");
                     Double height = sc.nextDouble();
                     area(breath,height);
                     perimeter(breath,height);
@@ -53,9 +49,7 @@ public class FunctionCall extends Calculations {
                     break;
 
                 default:
-                    System.out.println("Invalid choice : ");
-
-
+                    lg.info("Invalid choice : ");
             }
         }
     }
